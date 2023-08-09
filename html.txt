@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="login-box">
+        <img src="https://static.vecteezy.com/system/resources/previews/018/930/572/original/youtube-logo-youtube-icon-transparent-free-png.png" alt="YouTube Logo" class="youtube-logo">
+        <h2 class="h2">Youtube Keyword Search Volume</h2>
+
+        <form id="search-form">
+            <div class="search-container">
+                <input type="text" class="search" placeholder="Enter a keyword">
+            </div>
+
+            <a href="#">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <button type="submit" class="button button2">Search </button>
+            </a>
+        </form>
+
+        <div id="search-output" class="search-results">
+        </div>
+
+    </div>
+</body>
+
+</html>
