@@ -1,23 +1,74 @@
 @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
 
-.youtube-logo {
-    display: block;
-    margin: 0 auto;
-    width: 100px;
-    height: auto;
+.output-text {
+    font-size: 18px;
+    color: #333;
+    margin: 10px 0;
 }
 
+.keyword {
+    font-weight: bold;
+    background-image: linear-gradient(to bottom, #FFD700, #FFA500);
+    padding: 2px 6px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
 
+.keyword:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
 
+.appearances {
+    font-weight: 900;
+    font-size: 25px;
+    color: white;
+    background-image: linear-gradient(to bottom, #3498db, #2980b9);
+    /* Gradient for search appearances */
+    padding: 2px 6px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Box shadow for search appearances */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
 
+.appearances:hover {
+    transform: scale(1.05);
+    /* Enlarge on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Change box shadow on hover */
+}
 
-.h2 {
+.final {
+    font-weight: bold;
+    color: white;
+    font-size: 30px;
+    font-family: sans-serif;
+    letter-spacing: 30px;
+    text-align: center;
     text-decoration: underline;
 }
 
+.youtube-logo {
+    display: block;
+    margin: 0 auto;
+    width: 190px;
+    height: auto;
+}
+
+.h2 {
+    font-size: 30px;
+    font-family: sans-serif;
+    letter-spacing: 2px;
+
+
+}
+
 .button2:hover {
-    background-color: #008CBA;
-    color: white;
+    background-color: #141e30;
+    color: #03e9f4;
+    font-family: sans-serif;
 }
 
 .button3 {
@@ -27,9 +78,10 @@
 }
 
 .button {
-    background-color: #008CBA;
+    background-color: #141e30;
+    background: transparent;
     border: none;
-    color: white;
+    color: #03e9f4;
     padding: 16px 32px;
     text-align: center;
     text-decoration: none;
@@ -37,7 +89,10 @@
     font-size: 16px;
     margin: 4px 2px;
     transition-duration: 0.4s;
+    text-transform: uppercase;
     cursor: pointer;
+    font-family: sans-serif;
+    letter-spacing: 4px;
 }
 
 .search-results {
@@ -69,7 +124,13 @@ html {
 
 .search:hover,
 .search:focus {
-    border-color: #e74c3c;
+    padding: 10px;
+    border: 2px solid #3498db;
+    border-radius: 20px;
+    font-size: 16px;
+    width: 300px;
+    outline: none;
+    transition: border-color 0.3s ease-in-out;
 }
 
 body {
@@ -92,6 +153,17 @@ body {
     border-radius: 10px;
 }
 
+.login-box h1 {
+    margin: 0 0 10px;
+    padding: 30px;
+    color: #fff;
+    text-align: left;
+    text-decoration: underline;
+
+
+}
+
+
 .login-box h2 {
     margin: 0 0 30px;
     padding: 0;
@@ -108,7 +180,7 @@ body {
     padding: 10px 0;
     font-size: 16px;
     color: #fff;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     border: none;
     border-bottom: 1px solid #fff;
     outline: none;
