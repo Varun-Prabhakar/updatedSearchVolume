@@ -14,10 +14,10 @@
         <h2 class="h2">Youtube Keyword Search Volume</h2>
 
         <form id="search-form">
-            <div class="search-container">
-                <input type="text" class="search" placeholder="Enter a keyword">
+            <div class="user-box">
+                <input type="text" name="" required="">
+                <label>Enter a keyword</label>
             </div>
-
             <a href="#">
                 <span></span>
                 <span></span>
@@ -25,11 +25,11 @@
                 <span></span>
                 <button type="submit" class="button button2">Search </button>
             </a>
+
+            <p class="final">Result </p>
+            <div id="search-output" class="search-results">
+            </div>
         </form>
-
-        <div id="search-output" class="search-results">
-        </div>
-
     </div>
 </body>
 
