@@ -1,19 +1,20 @@
-const searchkeyword = (e) => {
+const searchkeyword = async (e) => {
     e.preventDefault();
-    const keyword = document.querySelector(".search").value;
-    const API_KEY = "AIzaSyDOdK4QlBWgygR9tPyPJU6fDryHjwlOjyc";
+    const keyword = document.querySelector(".user-box input").value;
+    const API_KEY = "AIzaSyDOpenyMcViu7Z9prmPejQcll0flp_ec_8";
     const apiUrl = `https://www.googleapis.com/youtube/v3/search?q=${encodeURIComponent(keyword)}&key=${API_KEY}`;
+    const outputElement = document.getElementById("search-output");
+    outputElement.innerHTML = `<p class="output-text"><b>Keyword: </b><span class="keyword">${keyword}</span></p>`;
 
-    fetch(apiUrl)
-        .then(response => response.json())
-        .then(data => {
-            const search_appearances = data.pageInfo.totalResults;
-            const outputElement = document.getElementById("search-output");
-            outputElement.innerHTML = `"${keyword}" appeared in ${search_appearances} search results.`;
-        })
-        .catch(error => {
-            console.error('An error occurred:', error);
-        });
+    try {
+        const response = await fetch(apiUrl);
+        const data = await response.json();
+        const searchAppearances = data.pageInfo.totalResults;
+
+        outputElement.innerHTML += `<p class="output-text"><span class="keyword">${keyword}</span> <b>appeared in</b> <span class="appearances">${searchAppearances}</span> <b>search results.</b></p>`;
+    } catch (error) {
+        console.error('An error occurred:', error);
+    }
 };
 
 document.getElementById("search-form").addEventListener("submit", searchkeyword);
